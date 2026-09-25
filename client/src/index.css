@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252e42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4661;
+}
+
+/* Custom typography & article formatting */
+.prose-blog {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.prose-blog h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.prose-blog h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}
+
+.prose-blog h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-blog p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-blog a {
+  color: #818cf8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+}
+
+.prose-blog a:hover {
+  color: #a5b4fc;
+}
+
+.prose-blog blockquote {
+  border-left: 4px solid #6366f1;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: #e2e8f0;
+}
+
+.prose-blog ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-blog ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-blog li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-blog pre {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.prose-blog code:not(pre code) {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.35rem;
+  font-size: 0.88em;
+}
+
+.prose-blog hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2.5rem 0;
+}
+
+.prose-blog img {
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-subtle {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.15);
+}
