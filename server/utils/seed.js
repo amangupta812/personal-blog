@@ -21,11 +21,24 @@ const seedData = async () => {
     await Comment.deleteMany();
     console.log('[Seed] Cleared existing data.');
 
-    // 1. Create Admin User
+    // 1. Create Admin User from environment variables (NEVER hardcoded in source control)
+    const adminEmail = (process.env.ADMIN_EMAIL || '').trim().toLowerCase();
+    const adminPassword = (process.env.ADMIN_PASSWORD || '').trim();
+    const adminName = (process.env.ADMIN_NAME || 'Blog Admin').trim();
+
+    if (!adminEmail || !adminPassword) {
+      console.error('\n❌ [Seed Error] ADMIN_EMAIL or ADMIN_PASSWORD is missing in server/.env');
+      console.error('To protect your credentials, please add the following to your private server/.env:');
+      console.error('  ADMIN_NAME=Your Name');
+      console.error('  ADMIN_EMAIL=your_email@example.com');
+      console.error('  ADMIN_PASSWORD=your_secure_password\n');
+      process.exit(1);
+    }
+
     const adminUser = await User.create({
-      name: 'Alex Morgan',
-      email: 'admin@personalblog.dev',
-      password: 'Admin@12345',
+      name: adminName,
+      email: adminEmail,
+      password: adminPassword,
       role: 'admin',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
       bio: 'Senior Full-Stack Engineer, System Architect, and Technical Writer. Building modern digital experiences and sharing practical learnings from production systems.',
@@ -355,9 +368,9 @@ This post is currently an active draft exploring the transition from code comple
 
     console.log(`[Seed] Seeded ${blogsData.length} articles with sample comments!`);
     console.log('\n=============================================');
-    console.log('🎉 Seed complete! Admin credentials:');
-    console.log(`Email:    admin@personalblog.dev`);
-    console.log(`Password: Admin@12345`);
+    console.log('🎉 Seed complete! Admin account ready:');
+    console.log(`Email:    ${adminEmail}`);
+    console.log('Password: [As defined in your private server/.env]');
     console.log('=============================================\n');
 
     process.exit(0);
