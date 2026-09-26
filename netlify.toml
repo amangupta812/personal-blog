@@ -1,0 +1,11 @@
+# Netlify configuration for Root Repository
+[build]
+  base = "client"
+  publish = "dist"
+  command = "npm run build"
+
+# Handle Single Page Application routing (prevent 404 on page refresh)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

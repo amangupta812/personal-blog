@@ -1,0 +1,9 @@
+# Netlify configuration when deploying directly from the client directory
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
