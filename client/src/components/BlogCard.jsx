@@ -22,7 +22,7 @@ export default function BlogCard({ blog }) {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-        
+
         {/* Category Pill */}
         {blog.category && (
           <div className="absolute top-3 left-3">
@@ -82,7 +82,7 @@ export default function BlogCard({ blog }) {
               className="w-7 h-7 rounded-full object-cover ring-1 ring-indigo-500/30"
             />
             <div>
-              <span className="font-medium text-slate-300 block">{blog.author?.name || 'Alex Morgan'}</span>
+              <span className="font-medium text-slate-300 block">{blog.author?.name || 'Aman Kumar'}</span>
               <span className="text-[11px] text-slate-500 flex items-center gap-1">
                 <Calendar className="w-3 h-3 inline" /> {formattedDate}
               </span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import { Shield, Lock, Mail, ArrowRight, Sparkles, KeyRound } from 'lucide-react';
+import { Shield, Lock, Mail, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import { useToast } from '../../components/Toast';
 
@@ -21,11 +21,6 @@ export default function AdminLogin() {
     navigate('/admin/dashboard', { replace: true });
   }
 
-  const handleFillDemo = () => {
-    setEmail('admin@personalblog.dev');
-    setPassword('Admin@12345');
-    addToast('Prefilled default admin credentials!', 'info');
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,7 +70,7 @@ export default function AdminLogin() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@personalblog.dev"
+                  placeholder="admin@example.com"
                   required
                   className="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500"
                 />
@@ -109,17 +104,6 @@ export default function AdminLogin() {
             </button>
           </form>
 
-          {/* Demo helper */}
-          <div className="pt-4 border-t border-slate-800/80 text-center">
-            <button
-              type="button"
-              onClick={handleFillDemo}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-950/80 border border-indigo-500/30 text-indigo-300 hover:bg-indigo-900/50 text-xs font-medium transition-colors"
-            >
-              <KeyRound className="w-3.5 h-3.5" />
-              <span>Fill Demo Admin Credentials</span>
-            </button>
-          </div>
         </div>
 
         <div className="text-center">

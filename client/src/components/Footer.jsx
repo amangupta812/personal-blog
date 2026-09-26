@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Bio column */}
           <div className="md:col-span-2">
-            <h4 className="text-xl font-bold text-white tracking-tight">Alex Morgan</h4>
+            <h4 className="text-xl font-bold text-white tracking-tight">Aman Kumar</h4>
             <p className="text-sm text-slate-400 mt-3 leading-relaxed max-w-sm">
               Full Stack Engineer & System Architect. Writing about real production lessons, modern frontend tools, scalable cloud backends, and deliberate software engineering.
             </p>
@@ -159,7 +159,7 @@ export default function Footer() {
 
         {/* Bottom copyright line */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <p>© {new Date().getFullYear()} Alex Morgan. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aman Kumar. All rights reserved.</p>
           <div className="flex items-center gap-1.5 text-slate-400">
             <span>Engineered with the</span>
             <span className="font-semibold text-indigo-400">MERN Stack</span>

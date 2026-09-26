@@ -88,7 +88,7 @@ export default function Home() {
               className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm sm:text-base transition-all flex items-center gap-2"
             >
               <Terminal className="w-4 h-4 text-indigo-400" />
-              <span>About Alex Morgan</span>
+              <span>About Aman Kumar</span>
             </Link>
           </div>
 
@@ -205,21 +205,19 @@ export default function Home() {
           <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-xl border border-slate-800 self-start sm:self-auto">
             <button
               onClick={() => setActiveTab('recent')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                activeTab === 'recent'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${activeTab === 'recent'
                   ? 'bg-indigo-600 text-white shadow-sm'
                   : 'text-slate-400 hover:text-white'
-              }`}
+                }`}
             >
               Most Recent
             </button>
             <button
               onClick={() => setActiveTab('popular')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                activeTab === 'popular'
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${activeTab === 'popular'
                   ? 'bg-indigo-600 text-white shadow-sm'
                   : 'text-slate-400 hover:text-white'
-              }`}
+                }`}
             >
               Most Popular
             </button>

@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden ring-4 ring-indigo-500/20 shadow-2xl shadow-indigo-500/20">
             <img
               src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
-              alt="Alex Morgan"
+              alt="Aman Kumar"
               className="w-full h-full object-cover"
             />
           </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <span>Senior Software Engineer &amp; Author</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Hi, I'm Alex Morgan.
+            Hi, I'm Aman Kumar.
           </h1>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl">
             I craft resilient full-stack web applications, demystify complex systems, and share practical engineering lessons with developers worldwide.

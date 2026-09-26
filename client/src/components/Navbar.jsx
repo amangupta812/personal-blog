@@ -31,7 +31,7 @@ export default function Navbar({ onOpenSearch }) {
           </div>
           <div>
             <span className="text-lg font-black tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
-              Alex Morgan
+              Aman Kumar
             </span>
             <span className="hidden sm:inline-block ml-2 text-xs font-mono px-1.5 py-0.5 rounded bg-indigo-950/80 text-indigo-400 border border-indigo-500/30">
               devlog
@@ -46,10 +46,9 @@ export default function Navbar({ onOpenSearch }) {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                  isActive
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+                `px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${isActive
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
                 }`
               }
             >
@@ -120,10 +119,9 @@ export default function Navbar({ onOpenSearch }) {
               to={link.path}
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `block px-4 py-2.5 rounded-xl text-base font-medium transition-colors ${
-                  isActive
-                    ? 'bg-indigo-600/20 text-indigo-400 border border-indigo-500/30'
-                    : 'text-slate-300 hover:bg-slate-900 hover:text-white'
+                `block px-4 py-2.5 rounded-xl text-base font-medium transition-colors ${isActive
+                  ? 'bg-indigo-600/20 text-indigo-400 border border-indigo-500/30'
+                  : 'text-slate-300 hover:bg-slate-900 hover:text-white'
                 }`
               }
             >

@@ -168,7 +168,7 @@ export default function BlogDetails() {
     year: 'numeric',
   });
 
-  const shareText = encodeURIComponent(`Reading "${blog.title}" by Alex Morgan`);
+  const shareText = encodeURIComponent(`Reading "${blog.title}" by Aman Kumar`);
   const shareUrl = encodeURIComponent(window.location.href);
 
   return (
@@ -227,7 +227,7 @@ export default function BlogDetails() {
               className="w-12 h-12 rounded-full object-cover ring-2 ring-indigo-500/30"
             />
             <div>
-              <h4 className="text-sm font-bold text-white">{blog.author?.name || 'Alex Morgan'}</h4>
+              <h4 className="text-sm font-bold text-white">{blog.author?.name || 'Aman Kumar'}</h4>
               <p className="text-xs text-slate-400">Senior Full-Stack Engineer &amp; Author</p>
             </div>
           </div>
@@ -236,11 +236,10 @@ export default function BlogDetails() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleLike}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border text-xs font-semibold transition-all ${
-                hasLiked
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border text-xs font-semibold transition-all ${hasLiked
                   ? 'bg-rose-950/80 border-rose-500 text-rose-300'
                   : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-rose-500/50 hover:text-rose-400'
-              }`}
+                }`}
               title="Like article"
             >
               <Heart className={`w-4 h-4 ${hasLiked ? 'fill-rose-500 text-rose-500' : 'text-slate-400'}`} />
@@ -321,11 +320,10 @@ export default function BlogDetails() {
         </p>
         <button
           onClick={handleLike}
-          className={`inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm shadow-xl transition-all ${
-            hasLiked
+          className={`inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-sm shadow-xl transition-all ${hasLiked
               ? 'bg-rose-600 text-white shadow-rose-600/30'
               : 'bg-rose-500 hover:bg-rose-400 text-white shadow-rose-500/30 hover:scale-105'
-          }`}
+            }`}
         >
           <Heart className={`w-4 h-4 ${hasLiked ? 'fill-white' : ''}`} />
           <span>{hasLiked ? `Liked (${likes})` : `Like this article (${likes})`}</span>
@@ -344,7 +342,7 @@ export default function BlogDetails() {
         {/* Comment Submission Form */}
         <form onSubmit={handleSubmitComment} className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
           <h4 className="text-sm font-semibold text-slate-200">Leave a thought or feedback</h4>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input
               type="text"
